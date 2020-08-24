@@ -12,7 +12,6 @@ from sklearn.metrics import mean_squared_error
 boston_data = pd.read_csv('boston_csv.csv')
 
 # TODO part 3. boston.csv안에 없는 값들은 열의 평균으로 대체한다.
-# na를 어떻게 처리할지가 문제 NaN으로 바꾸면 코드 정상적으로 작동
 imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
 imputer = imputer.fit(boston_data)
 boston_data = imputer.transform(boston_data)
